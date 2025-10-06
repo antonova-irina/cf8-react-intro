@@ -6,6 +6,7 @@
 // import ArrowFunctionalComponentWithPropsType from "./components/ArrowFunctionalComponentWithPropsType.tsx";
 // import Card from "./components/Card.tsx";
 import Layout from "./components/Layout.tsx";
+import PreviewsValue from "./components/PreviousValue.tsx";
 // import FunctionalComponentWithState from "./components/FunctionalComponentWithState.tsx";
 // import ClassComponentWithState from "./components/ClassComponentWithState.tsx";
 // import Counter from "./components/Counter.tsx";
@@ -16,7 +17,7 @@ import Layout from "./components/Layout.tsx";
 // import NameChangerWithEffect from "./components/NameChangerWithEffect.tsx";
 // import Timer from "./components/Timer.tsx";
 // import WindowSize from "./components/WindowSize.tsx";
-import FocusInput from "./components/FocusInput.tsx";
+// import FocusInput from "./components/FocusInput.tsx";
 
 function App() {
 
@@ -55,7 +56,8 @@ function App() {
                 {/*<NameChangerWithEffect />*/}
                 {/*<Timer />*/}
                 {/*<WindowSize />*/}
-                <FocusInput />
+                {/*<FocusInput />*/}
+                <PreviewsValue />
             </Layout>
 
 
