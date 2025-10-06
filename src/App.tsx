@@ -13,8 +13,8 @@ import Layout from "./components/Layout.tsx";
 // import CounterWithMoreStates from "./components/CounterWithMoreStates.tsx";
 // import CounterAdvanced from "./components/CounterAdvanced.tsx";
 // import CounterWithCustomHook from "./components/CounterWithCustomHook.tsx";
-import NameChangerWithEffect from "./components/NameChangerWithEffect.tsx";
-// import Timer from "./components/Timer.tsx";
+// import NameChangerWithEffect from "./components/NameChangerWithEffect.tsx";
+import Timer from "./components/Timer.tsx";
 
 function App() {
 
@@ -50,8 +50,8 @@ function App() {
                 {/*<CounterWithMoreStates />*/}
                 {/*<CounterAdvanced />*/}
                 {/*<CounterWithCustomHook/>*/}
-                <NameChangerWithEffect />
-                {/*<Timer />*/}
+                {/*<NameChangerWithEffect />*/}
+                <Timer />
             </Layout>
 
 
