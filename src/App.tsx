@@ -5,9 +5,14 @@
 // import ArrowFunctionalComponentWithProps from "./components/ArrowFunctionalComponentWithProps.tsx";
 // import ArrowFunctionalComponentWithPropsType from "./components/ArrowFunctionalComponentWithPropsType.tsx";
 // import Card from "./components/Card.tsx";
-import Layout from "./components/Layout.tsx";
+// import Layout from "./components/Layout.tsx";
 // import PreviewsValue from "./components/PreviousValue.tsx";
-import CounterWithRef from "./components/CounterWithRef.tsx";
+// import CounterWithRef from "./components/CounterWithRef.tsx";
+// import {useEffect} from "react";
+import {BrowserRouter, Route, Routes} from "react-router";
+import NameChanger from "./components/NameChanger.tsx";
+import HomePage from "./pages/HomePage.tsx";
+import Timer from "./components/Timer.tsx";
 // import FunctionalComponentWithState from "./components/FunctionalComponentWithState.tsx";
 // import ClassComponentWithState from "./components/ClassComponentWithState.tsx";
 // import Counter from "./components/Counter.tsx";
@@ -22,7 +27,15 @@ import CounterWithRef from "./components/CounterWithRef.tsx";
 
 function App() {
 
-    return (
+    // useEffect(() => {
+    //     history.pushState({page: 1}, "", "/page")
+    //     history.replaceState({page: 1}, "", "/page1")
+    //     window.onpopstate = (e) => {
+    //         console.log(e.state);
+    //     }
+    // }, []);
+
+        return (
         <>
             {/*<ViteIntro />*/}
             {/*<ClassComponent />*/}
@@ -41,7 +54,7 @@ function App() {
             {/*  />*/}
             {/*</Card>*/}
 
-            <Layout>
+            {/*<Layout>*/}
                   {/*<ArrowFunctionalComponentWithPropsType*/}
                   {/*  title="Is a Arrow Functional Component With 2 Props"*/}
                   {/*  description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, veniam."*/}
@@ -59,9 +72,17 @@ function App() {
                 {/*<WindowSize />*/}
                 {/*<FocusInput />*/}
                 {/*<PreviewsValue />*/}
-                <CounterWithRef />
-            </Layout>
+            {/*    <CounterWithRef />*/}
+            {/*</Layout>*/}
+<BrowserRouter>
+<Routes>
+    <Route path="index" element={<HomePage />} />
+    <Route path="name-changer" element={<NameChanger />} />
+    <Route path="timer" element={<Timer />} />
 
+</Routes>
+
+</BrowserRouter>
 
         </>
     )
