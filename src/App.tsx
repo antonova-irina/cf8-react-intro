@@ -13,6 +13,8 @@ import {BrowserRouter, Route, Routes} from "react-router";
 import NameChanger from "./components/NameChanger.tsx";
 import HomePage from "./pages/HomePage.tsx";
 import Timer from "./components/Timer.tsx";
+import RouterLayout from "./components/RouterLayout.tsx";
+import UserPage from "./pages/UserPage.tsx";
 // import FunctionalComponentWithState from "./components/FunctionalComponentWithState.tsx";
 // import ClassComponentWithState from "./components/ClassComponentWithState.tsx";
 // import Counter from "./components/Counter.tsx";
@@ -76,9 +78,32 @@ function App() {
             {/*</Layout>*/}
 <BrowserRouter>
 <Routes>
-    <Route path="index" element={<HomePage />} />
-    <Route path="name-changer" element={<NameChanger />} />
-    <Route path="timer" element={<Timer />} />
+
+    <Route element={<RouterLayout/>}>
+    <Route index element={<HomePage />} />
+    {/*<Route path="name-changer" element={<NameChanger />} />*/}
+    {/*<Route path="timer" element={<Timer />} />*/}
+
+
+    <Route path="examples?">
+        <Route path="name-changer" element={<NameChanger />} />
+        <Route path="timer" element={<Timer />} />
+    </Route>
+    </Route>
+
+    {/*<Route path="users/:userId" element={<UserPage />} />*/}
+    {/*<Route path="files/*" element={<FilePage />} />*/}
+
+    {/*<Route path="users/:userId" element={<UserPage />} />*/}
+    {/*<Route path="users/:userId/accounts" element={<UserAccountPage />} />*/}
+
+    <Route path="users">
+        <Route path=":userId">
+            <Route index element={<UserPage/>}/>
+            {/*<Route path="accounts" element={<UserAccountPage/>}/>*/}
+        </Route>
+    </Route>
+
 
 </Routes>
 
