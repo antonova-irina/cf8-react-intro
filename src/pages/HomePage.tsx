@@ -5,7 +5,10 @@ const HomePage = () => {
     const links = [
         {path: "/", label: "Home Page"},
         {path: "/name-changer", label: "Name Changer Example"},
-        {path: "/timer", label: "Timer Example"}
+        {path: "/timer", label: "Timer Example"},
+        {path: "/controlled-input", label: "Controlled Input Example"},
+        {path: "/examples/uncontrolled-input", label: "Uncontrolled Input Example"},
+        {path: "/multifield-form", label: "Multifield Form Example"},
     ]
 
     useEffect(()=> {
